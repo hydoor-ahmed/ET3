@@ -98,7 +98,7 @@ nav .container ul li a::before {
   position: absolute;
   left: -200px;
   top: 0;
-  height: 2px;
+  height: 3px;
   transition: .3s;
 }
 nav .container ul li a:hover::before {
