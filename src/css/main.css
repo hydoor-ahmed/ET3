@@ -13,6 +13,7 @@ html {
 }
 body {
   font-family: "Cairo", sans-serif;
+  height: 2000px;
 }
 .container {
   padding-left: 15px;
@@ -313,3 +314,14 @@ nav .container .mega-menu .m-links ul li a i {
   }
 }
 /* End Landing */
+
+/* Start Article */
+.articles {
+  margin-top: 100px;
+}
+.articles .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 40px;
+}
+/* End Article */

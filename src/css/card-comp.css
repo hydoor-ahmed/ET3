@@ -1,0 +1,58 @@
+@import './main.css';
+
+.card {
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+  overflow: hidden;
+  transition: .3s;
+}
+.card img {
+  width: 100%;
+}
+.card .card-text {
+  padding: 17px;
+}
+.card .card-text h1 {
+  font-size: 20px;
+  margin: 0;
+  margin-bottom: 5px;
+}
+.card .card-text p {
+  margin-bottom: 10px;
+  color: #777;
+}
+.card .more::before {
+  content: '';
+}
+.card .more {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--main-color);
+  border-top: 1px solid #e6e6e7;
+  padding: 13px;
+  font-weight: bold;
+}
+.card .more a {
+  color: var(--main-color);
+  text-decoration: none;
+  flex: 1;
+}
+.card .more i {
+  transition: .3s;
+  margin-right: 5px;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+}
+.card:hover .more i {
+  animation: left-right 0.7s linear infinite;
+}
+@keyframes left-right {
+
+  100%{
+    transform: translateX(10px);
+  }
+}

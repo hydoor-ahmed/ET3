@@ -1,8 +1,9 @@
 @import './main.css';
 .main-title {
   width: fit-content;
-  margin: 40px auto;
+  margin: 0 auto;
   margin-top: 100px;
+  margin-bottom: 100px;
   border: 2px solid black;
   padding: 11px 25px;
   text-transform: uppercase;
