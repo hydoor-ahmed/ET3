@@ -1,0 +1,81 @@
+@import './main.css';
+.main-title {
+  width: fit-content;
+  margin: 40px auto;
+  margin-top: 100px;
+  border: 2px solid black;
+  padding: 11px 25px;
+  text-transform: uppercase;
+  font-size: 14px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: .3s;
+}
+@media (max-width: 302px) {
+  .main-title {
+    font-size: 12px;
+    padding: 8px 20px;
+  }
+}
+.main-title::before,
+.main-title::after  {
+  content: '';
+  background: var(--main-color);
+  position: absolute;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+.main-title::before {
+  left: -30px;
+}
+.main-title::after {
+  right: -30px;
+}
+.main-title:hover {
+  color: white;
+  border-color: white;
+  transition-delay: .3s;
+}
+.main-title:hover::before {
+  animation: right-move .5s linear forwards;
+  z-index: -1;
+}
+.main-title:hover::after {
+  animation: left-move .5s linear forwards;
+  z-index: -1;
+}
+@keyframes right-move {
+  50% {
+    left: 0;
+    width: 12px;
+    height: 12px;
+  }
+  100% {
+    left: 0;
+    border-radius: 0;
+    width: 60%;
+    height: 100%;
+  }
+}
+@keyframes left-move {
+  50% {
+    right: 0;
+    width: 12px;
+    height: 12px;
+  }
+  100% {
+    right: 0;
+    border-radius: 0;
+    width: 60%;
+    height: 100%;
+  }
+}
+
+.main-title h1 {
+  padding: 0;
+  margin: 0;
+}
